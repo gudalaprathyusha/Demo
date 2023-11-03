@@ -1,0 +1,39 @@
+class Person {
+    String city;
+    int uniqueId;
+
+    Person(int uniqueId, String city) {
+        this.uniqueId = uniqueId;
+        this.city = city;
+    }
+
+    void display() {
+        System.out.println("ID: " + uniqueId);
+        System.out.println("City: " + city);
+    }
+}
+
+class Student extends Person {
+    String name;
+    String course;
+
+    Student(int uniqueId, String city, String name, String course) {
+        super(uniqueId,city);
+        this.name = name;
+        this.course = course;
+    }
+
+    @Override
+    void display() {
+        super.display();
+        System.out.println("Name: " + name);
+        System.out.println("Course: " + course);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student student = new Student(12345, "Bangalore", "prathyu", "Electronics");
+        student.display();
+    }
+}
