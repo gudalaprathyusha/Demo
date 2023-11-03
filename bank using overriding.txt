@@ -1,0 +1,36 @@
+class Bank {
+    public void loan() {
+        System.out.println("loan percentage of current year is 5%");
+    }
+}
+
+class SBI extends Bank {
+    public void loan() {
+        System.out.println("loan percentage of current year is 7%");
+    }
+}
+
+class HDFC extends Bank {
+    public void loan() {
+        System.out.println("loan percentage of the current year is 8%");
+    }
+}
+
+class ICICI extends Bank {
+    public void loan() {
+        System.out.println("loan percentage of the current year is 7.5%");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Bank b = new Bank();
+        b.loan();
+        SBI s = new SBI();
+        s.loan();
+        HDFC h = new HDFC();
+        h.loan();
+        ICICI i = new ICICI();
+        i.loan();
+    }
+}
