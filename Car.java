@@ -1,8 +1,11 @@
-package com.tap;
+package com.coupling;
 
-public interface Car {
-	void carCompany();
+public class Car implements Examination {
 
-	//void bikeCompany();
+	@Override
+	public void gift() {
+		System.out.println("you won a car......");
+		
+	}
 
 }
